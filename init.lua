@@ -1,2 +1,4 @@
+require("user.lazy")
+require("user.colorscheme")
 require("user.options")
-vim.cmd("colorscheme unokai")
+require("user.keymaps")
