@@ -21,7 +21,7 @@ vim.g.maplocalleader = " "
 require("lazy").setup({
 	spec = {
 		-- Load plugins from sections
-		{ import = "user.plugins.colorschemes" },
+		{ import = "user.colorschemes" },
 	},
 	ui = {
 		border = "rounded"
