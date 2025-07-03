@@ -6,9 +6,9 @@ My personal daily drive configuration of neovim was built using this base setup.
 
 ---
 
-# Features
+# ✨ Features
 
-## Quality of Life settings
+## Quality of Life settings ⚙️
 The default behavior of neovim may not be comfortable for some users. That's why some settings have been changed in the `lua/user/options.lua` file.
 You can test the behavior, and remove an option if you don't like it.
 Test it until you find something that works for you.
@@ -95,11 +95,18 @@ There are some great bindings that make some behaviors more intuitive marked wit
 | `<` | Indent 1 tab to the left |
 | `>` | Indent 1 tab to the right |
 
-## Plugin manager 🔌
+## Plugin manager 💤
 I think that the best plugin manager to use right now is [lazy.nvim 💤](https://github.com/folke/lazy.nvim) by [folke](https://github.com/folke). It supports lazy-loading, nice UI and good performance.
 You can found the installation of lazy in `lua/user/lazy.lua` from the lazy official repo.
 
-## Plugin stucture
+## Plugin stucture 🔌
 
 You can find all the plugins in `lua/user/plugins`. You will see that the plugins are separated by categories, avoiding one single `plugins` folder with dozens of files.
 You can change this structure or add new categories in the `lua/user/lazy.lua` and edit the `import` setting. With this structure you can make a more modular and elegant config.
+
+---
+
+# Plugins list
+The following are standard plugins to make neovim experience more confortable.
+
+**[nvim-autopairs](https://github.com/windwp/nvim-autopairs)**: Smart pair management.

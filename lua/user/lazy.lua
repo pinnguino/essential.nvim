@@ -22,6 +22,7 @@ require("lazy").setup({
 	spec = {
 		-- Load plugins from sections
 		{ import = "user.colorschemes" },
+		{ import = "user.plugins.core" },
 	},
 	ui = {
 		border = "rounded"
