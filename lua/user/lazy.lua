@@ -23,6 +23,8 @@ require("lazy").setup({
 		-- Load plugins from sections
 		{ import = "user.colorschemes" },
 		{ import = "user.plugins.core" },
+		{ import = "user.plugins.markdown" },
+		{ import = "user.plugins.ui" },
 	},
 	ui = {
 		border = "rounded"
