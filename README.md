@@ -1,4 +1,6 @@
-# essential.nvim 🐧
+![banner](/banner.png)
+
+---
 This is a minimal neovim config that includes the *essential* configurations and plugins. It's focused on being minimal, so it will include some basic things that I think every neovim configuration should have.
 It can be boring to set up the base for a new config, so the goal of this configuration is to save you some time.
 This configuration is inspired on the well known repo [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim), but with my way of structuring the configuration.
