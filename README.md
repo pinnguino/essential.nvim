@@ -45,7 +45,6 @@ opt.writebackup = false                     -- if a file is being edited by anot
 opt.shiftwidth = 4                          -- the number of spaces inserted for each indentation
 opt.tabstop = 4                             -- insert 4 spaces for a tab
 opt.cursorline = true                       -- highlight the current line
-opt.number = true                           -- set numbered lines
 opt.relativenumber = true                   -- set relative numbered lines
 opt.numberwidth = 5                         -- set number column width {default 4}
 opt.foldmethod = "indent"                   -- fold text based on the indentation
@@ -58,7 +57,7 @@ vim.g.loaded_netrw = 1                      -- disable netrw
 vim.g.loaded_netrwPlugin = 1                -- disable netrw, use a tree-explorer plugin instead
 ```
 
-## Keymaps ⌨️
+## Basic Keymaps ⌨️
 I included some of my personal favourite keymaps for my neovim workflow. Change anything to make this config match your own style.
 There are some great bindings that make some behaviors more intuitive marked with `!` in the `lua/user/keymaps.lua` file. I recommend trying those keymaps.
 
@@ -111,4 +110,10 @@ You can change this structure or add new categories in the `lua/user/lazy.lua` a
 # Plugins list
 The following are standard plugins to make neovim experience more confortable.
 
-**[nvim-autopairs](https://github.com/windwp/nvim-autopairs)**: Smart pair management.
+- **[nvim-autopairs](https://github.com/windwp/nvim-autopairs)**: Smart pair management.
+- **[nvim-surround](https://github.com/kylechui/nvim-surround)**: Surround text with any character.
+- **[nvim-tree](https://github.com/nvim-tree/nvim-tree.lua)**: A tree file explorer.
+- **[rainbow-delimiters.nvim](https://github.com/HiPhish/rainbow-delimiters.nvim)**: Add colors for your (), [], {}.
+- [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim): A blazing fast statusline.
+- [markview.nvim](https://github.com/OXY2DEV/markview.nvim) and [obsidian.nvim](https://github.com/epwalsh/obsidian.nvim): My note-taking combo for markdown.
+- [fzf-lua](https://github.com/ibhagwan/fzf-lua): The fuzzy way of searching files inside Neovim.
