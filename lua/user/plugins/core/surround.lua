@@ -1,13 +1,13 @@
 return {
     "kylechui/nvim-surround",
-    version = "^3.0.0", -- Use for stability; omit to use 'main' branch for the latest features
+    version = "^3.0.0",
     event = "InsertEnter",
 	config = function()
 		require("nvim-surround").setup({
 			surrounds = {
-				["i"] = { -- TODO: Add find/delete/change functions
+				["i"] = {
 					add = function()
-						local delimiter = vim.fn.input({ prompt = "Enter the left delimiter: " })
+						local delimiter = vim.fn.input({ prompt = "Enter the delimiter: " })
 						-- local right_delimiter = left_delimiter and M.get_input("Enter the right delimiter: ")
 						if delimiter then
 							return { { delimiter }, { delimiter } }
@@ -17,7 +17,6 @@ return {
 					delete = function() end,
 				},
 			}
-			-- Configuration here, or leave empty to use defaults
 		})
 	end
 }
