@@ -7,8 +7,8 @@ return {
 			options = {
 				icons_enabled = true,
 				theme = 'auto',
-				component_separators = { left = '', right = ''},
-				section_separators = { left = '', right = ''},
+				component_separators = { left = '│', right = '│'},
+				section_separators = { left = '', right = ''},
 				disabled_filetypes = {
 					'NvimTree'
 				},
@@ -36,8 +36,18 @@ return {
 				}
 			},
 			sections = {
-				lualine_a = {'mode'},
-				lualine_b = {'branch', 'diff', 'diagnostics'},
+				lualine_a = {
+					{
+						'mode',
+						gui = 'bold', -- Bold text mode
+					},
+				},
+				lualine_b = {
+					{
+						'branch',
+						icon = ''
+					},
+					'diff', 'diagnostics'},
 				lualine_c = {'filename'},
 				lualine_x = {'filetype'},
 				lualine_y = {},
