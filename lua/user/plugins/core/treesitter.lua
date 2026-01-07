@@ -4,7 +4,19 @@ return {
 	build = ':TSUpdate', -- Automatically update parsers on plugin update
 	config = function()
 		require('nvim-treesitter.configs').setup {
-			ensure_installed = { "lua", "powershell", "vimdoc", "markdown", "markdown_inline", "html" }, -- Languages to install parsers for
+			ensure_installed = {
+				"lua",
+				"vimdoc",
+				"markdown",
+				"markdown_inline",
+				"html",
+				"css",
+				"bash",
+				"git_config",
+				"gitignore",
+				"json",
+
+			}, -- Languages to install parsers for
 			highlight = {
 				enable = true, -- Enable syntax highlighting
 			},
