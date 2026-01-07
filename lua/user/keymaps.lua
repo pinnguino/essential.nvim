@@ -42,6 +42,8 @@ keymap("n", "<leader>on", ":only<CR>", opts) -- Exit split (without closing the 
 
 -- Search
 keymap("n", "<Esc>", ":noh<CR>", opts) -- Hide matching ocurrences on search
+keymap("n", "<leader>ff", ":FzfLua files<CR>", opts) -- Find files
+keymap("n", "<leader>fr", ":FzfLua oldfiles<CR>", opts) -- Recent files
 
 -- Resize splits with arrow keys
 keymap("n", "<C-Up>", ":resize +2<CR>", opts)
