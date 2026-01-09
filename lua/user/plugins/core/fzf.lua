@@ -3,6 +3,7 @@ return {
 	event = "VeryLazy",
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	opts = function()
+		require('fzf-lua').register_ui_select()
 		return {
 			defaults = {
 				actions = {
