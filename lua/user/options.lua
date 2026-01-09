@@ -28,7 +28,6 @@ opt.number = true
 opt.relativenumber = true                   -- set relative numbered lines
 opt.numberwidth = 5                         -- set number column width {default 4}
 opt.signcolumn = "yes"                      -- always show the sign column, otherwise it would shift the text each time
--- opt.signcolumn = "number"
 opt.foldmethod = "indent"                   -- fold text based on the indentation
 opt.foldlevel = 99                          -- every fold is open when opening a file
 opt.wrap = false                            -- display lines as one long line
