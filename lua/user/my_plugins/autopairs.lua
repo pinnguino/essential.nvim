@@ -112,13 +112,10 @@ local function setup_autopairs()
 		end
 	end,
 	{ noremap = true, silent = true, expr = true })
-	vim.notify("Autopairs enabled!")
 end
 
+-- Lazy load autopairs when entering insert mode
 vim.api.nvim_create_autocmd(
 	"InsertEnter",
 	{ callback = setup_autopairs }
 )
-
--- Call setup function to setup autopairs
--- setup_autopairs()
