@@ -24,11 +24,13 @@ opt.writebackup = false                     -- if a file is being edited by anot
 opt.shiftwidth = 4                          -- the number of spaces inserted for each indentation
 opt.tabstop = 4                             -- insert 4 spaces for a tab
 opt.cursorline = true                       -- highlight the current line
+opt.number = true
 opt.relativenumber = true                   -- set relative numbered lines
 opt.numberwidth = 5                         -- set number column width {default 4}
+opt.signcolumn = "yes"                      -- always show the sign column, otherwise it would shift the text each time
+-- opt.signcolumn = "number"
 opt.foldmethod = "indent"                   -- fold text based on the indentation
 opt.foldlevel = 99                          -- every fold is open when opening a file
-opt.signcolumn = "yes"                      -- always show the sign column, otherwise it would shift the text each time
 opt.wrap = false                            -- display lines as one long line
 opt.shortmess:append 'c'					-- Discrete messages
 vim.cmd "set whichwrap+=<,>,[,],h,l"			-- Improve the way you move (more intuitive) 
