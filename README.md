@@ -125,6 +125,18 @@ You can found the installation of lazy in `lua/user/lazy.lua` from the lazy offi
 You can find all the plugins in `lua/user/plugins`. You will see that the plugins are separated by categories, avoiding one single `plugins` folder with dozens of files.
 You can change this structure or add new categories in the `lua/user/lazy.lua` and edit the `import` setting. With this structure you can make a more modular and elegant config.
 
+```
+lua/user/plugins/
+├── core
+│   └── ...
+├── lsp
+│   └── ...
+├── markdown
+│   └── ...
+└── ui
+    └── ...
+```
+
 ---
 
 # Plugins list
