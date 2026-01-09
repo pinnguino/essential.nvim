@@ -30,7 +30,7 @@ opt.hlsearch = true                         -- highlight all matches on previous
 opt.ignorecase = true                       -- ignore case in search patterns
 opt.mouse = "a"                             -- allow the mouse to be used in neovim
 opt.pumheight = 10                          -- pop up menu height
-opt.showmode = true                         -- show the neovim mode (disable when using a statusline)
+opt.showmode = false						-- show the neovim mode (disable when using a statusline)
 opt.showtabline = 1                         -- always show tabs
 opt.smartcase = true                        -- smart case
 opt.smartindent = true                      -- make indenting smarter again
@@ -45,16 +45,17 @@ opt.writebackup = false                     -- if a file is being edited by anot
 opt.shiftwidth = 4                          -- the number of spaces inserted for each indentation
 opt.tabstop = 4                             -- insert 4 spaces for a tab
 opt.cursorline = true                       -- highlight the current line
+opt.number = true
 opt.relativenumber = true                   -- set relative numbered lines
 opt.numberwidth = 5                         -- set number column width {default 4}
+opt.signcolumn = "yes"                      -- always show the sign column, otherwise it would shift the text each time
 opt.foldmethod = "indent"                   -- fold text based on the indentation
 opt.foldlevel = 99                          -- every fold is open when opening a file
-opt.signcolumn = "yes"                      -- always show the sign column, otherwise it would shift the text each time
 opt.wrap = false                            -- display lines as one long line
-opt.shortmess:append 'c'                    -- discrete messages
-vim.cmd "set whichwrap+=<,>,[,],h,l"        -- improve the way you move (more intuitive) 
-vim.g.loaded_netrw = 1                      -- disable netrw
-vim.g.loaded_netrwPlugin = 1                -- disable netrw, use a tree-explorer plugin instead
+opt.shortmess:append 'c'					-- Discrete messages
+vim.cmd "set whichwrap+=<,>,[,],h,l"			-- Improve the way you move (more intuitive) 
+vim.g.loaded_netrw = 1							-- disable netrw
+vim.g.loaded_netrwPlugin = 1					-- disable netrw, use a tree-explorer plugin instead
 ```
 
 ## Basic Keymaps ⌨️
@@ -96,6 +97,25 @@ There are some great bindings that make some behaviors more intuitive marked wit
 | `<` | Indent 1 tab to the left |
 | `>` | Indent 1 tab to the right |
 
+## Native LSP
+Since Neovim 0.11, the configuration for LSP can be achieved in a easy way without installing [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig).
+
+When you want to add more languages servers simply add a new file with the name of the LSP in /lsp and return a table with the LSP configuration.
+```
+lsp/
+├── jsonls.lua
+└── lua_ls.lua
+```
+
+Enabling the servers in the `lua/user/lsp.lua`:
+```lua
+vim.lsp.enable({
+	"jsonls",
+	"lua_ls",
+})
+
+```
+
 ## Plugin manager 💤
 I think that the best plugin manager to use right now is [lazy.nvim 💤](https://github.com/folke/lazy.nvim) by [folke](https://github.com/folke). It supports lazy-loading, nice UI and good performance.
 You can found the installation of lazy in `lua/user/lazy.lua` from the lazy official repo.
@@ -114,6 +134,9 @@ The following are standard plugins to make neovim experience more confortable.
 - **[nvim-surround](https://github.com/kylechui/nvim-surround)**: Surround text with any character.
 - **[nvim-tree](https://github.com/nvim-tree/nvim-tree.lua)**: A tree file explorer.
 - **[rainbow-delimiters.nvim](https://github.com/HiPhish/rainbow-delimiters.nvim)**: Add colors for your (), [], {}.
-- [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim): A blazing fast statusline.
-- [markview.nvim](https://github.com/OXY2DEV/markview.nvim) and [obsidian.nvim](https://github.com/epwalsh/obsidian.nvim): My note-taking combo for markdown.
-- [fzf-lua](https://github.com/ibhagwan/fzf-lua): The fuzzy way of searching files inside Neovim.
+- **[lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)**: A blazing fast statusline.
+- **[markview.nvim](https://github.com/OXY2DEV/markview.nvim)** and **[obsidian.nvim](https://github.com/epwalsh/obsidian.nvim)**: My note-taking combo for markdown.
+- **[fzf-lua](https://github.com/ibhagwan/fzf-lua)**: The fuzzy way of searching files inside Neovim.
+- **[blink.cmp](https://github.com/saghen/blink.cmp)**: An easy and blazing fast completion plugin.
+- **[mason.nvim](https://github.com/mason-org/mason.nvim)**: A portable package manager for installing LSPs, Linter, etc.
+- **[statuscol.nvim](https://github.com/luukvbaal/statuscol.nvim)**: A statuscol plugin for show the relative line numbers in one column.
