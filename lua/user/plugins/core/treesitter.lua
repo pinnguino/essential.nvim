@@ -3,7 +3,7 @@ return {
 	lazy = false,
 	build = ':TSUpdate', -- Automatically update parsers on plugin update
 	config = function()
-		require('nvim-treesitter.configs').setup {
+		require('nvim-treesitter').setup ({
 			ensure_installed = {
 				"lua",
 				"vimdoc",
@@ -23,6 +23,6 @@ return {
 			indent = {
 				enable = true, -- Enable indentation
 			},
-		}
+		})
 	end
 }
