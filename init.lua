@@ -1,5 +1,6 @@
 require("user.options")
 require("user.lazy")
+require("user.lsp")
 require("user.colorscheme")
 require("user.keymaps")
 require("user.my_plugins.autopairs")

@@ -25,6 +25,7 @@ require("lazy").setup({
 		{ import = "user.plugins.core" },
 		{ import = "user.plugins.markdown" },
 		{ import = "user.plugins.ui" },
+		{ import = "user.plugins.lsp" },
 	},
 	ui = {
 		border = "rounded"
