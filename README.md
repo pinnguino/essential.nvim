@@ -158,3 +158,5 @@ The following are standard plugins to make neovim experience more confortable.
 - **[blink.cmp](https://github.com/saghen/blink.cmp)**: An easy and blazing fast completion plugin.
 - **[mason.nvim](https://github.com/mason-org/mason.nvim)**: A portable package manager for installing LSPs, Linter, etc.
 - **[statuscol.nvim](https://github.com/luukvbaal/statuscol.nvim)**: A statuscol plugin for show the relative line numbers in one column.
+- **[harpoon](https://github.com/ThePrimeagen/harpoon/tree/harpoon2)**: Getting you where you want with the fewest keystrokes.
+- **[nvim-notify](https://github.com/rcarriga/nvim-notify)**: Fancy notifications for neovim.
