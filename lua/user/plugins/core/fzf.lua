@@ -6,9 +6,13 @@ return {
 		require('fzf-lua').register_ui_select()
 		return {
 			defaults = {
+				prompt = "   ",
 				actions = {
 					["ctrl-l"] = require("fzf-lua").actions.file_edit,
 				}
+			},
+			fzf_opts = {
+				["--pointer"] = " "
 			}
 		}
 	end

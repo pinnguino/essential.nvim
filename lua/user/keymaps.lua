@@ -4,14 +4,6 @@ local keymap = vim.keymap.set
 -- Common options for almost every keymap
 local opts = { noremap = true, silent = true }
 
--- Neovim modes --
---   normal_mode = "n",
---   insert_mode = "i",
---   visual_mode = "v",
---   visual_block_mode = "x",
---   term_mode = "t",
---   command_mode = "c",
-
 ------------------------------------------------------------------------------------------------
 -- Keymap syntax:                                                                             --
 -- keymap('m', "keybind", "keymap", opts)                                                     --
@@ -19,6 +11,14 @@ local opts = { noremap = true, silent = true }
 -- keybind: Bind that you want to set                                                         --
 -- keymap: The keymap you want to replace (Note: the previous keymap will remain untouched).  --
 ------------------------------------------------------------------------------------------------
+
+-- Neovim modes --
+--   normal_mode = "n",
+--   insert_mode = "i",
+--   visual_mode = "v",
+--   visual_block_mode = "x",
+--   term_mode = "t",
+--   command_mode = "c",
 
 -- NORMAL MODE --
 -- Better navigation between splits
@@ -42,8 +42,15 @@ keymap("n", "<leader>on", ":only<CR>", opts) -- Exit split (without closing the 
 
 -- Search
 keymap("n", "<Esc>", ":noh<CR>", opts) -- Hide matching ocurrences on search
-keymap("n", "<leader>ff", ":FzfLua files<CR>", opts) -- Find files
+
+keymap("n", "<leader>ff", ":FzfLua files<CR>", opts) -- Files
+keymap("n", "<leader>fb", ":FzfLua buffers<CR>", opts) -- Files
+keymap("n", "<leader>fg", ":FzfLua live_grep<CR>", opts) -- Text in files
 keymap("n", "<leader>fr", ":FzfLua oldfiles<CR>", opts) -- Recent files
+keymap("n", "<leader>fc", ":FzfLua colorschemes<CR>", opts) -- Colorschemes
+keymap("n", "<leader>fC", ":FzfLua commands<CR>", opts) -- Neovim commands
+keymap("n", "<leader>fd", ":FzfLua diagnostics_workspace<CR>", opts) -- Workspace diagnostics
+keymap("n", "<leader>fk", ":FzfLua keymaps<CR>", opts) -- Keymaps
 
 -- Resize splits with arrow keys
 keymap("n", "<C-Up>", ":resize +2<CR>", opts)
@@ -78,4 +85,6 @@ keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
 keymap("v", "p", '"_dP', opts) -- Mantains the clipboard after highlighting something and pasting.
+
+keymap("n", "<leader>L", ":Lazy<CR>", opts) -- Open lazy.nvim
 
