@@ -1,6 +1,6 @@
 return 	{
 	"epwalsh/obsidian.nvim",
-	enabled = false, 
+	enabled = true,
 	-- event = "VeryLazy",
 	ft = "markdown",
 	version = "*",  -- recommended, use latest release instead of latest commit
@@ -14,7 +14,7 @@ return 	{
 			workspaces = {
 				{
 					name = "second-brain",
-					path = "~/notes/second-brain",
+					path = "~/second-brain",
 				},
 			}
 		})
