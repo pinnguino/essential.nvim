@@ -1,7 +1,6 @@
 vim.diagnostic.config({
 	-- virtual_lines = true, -- this gets messy on large code base with tons of errors
 	-- virtual_text = true
-
 	underline = true,
 	update_in_insert = false,
 	severity_sort = true,
@@ -26,5 +25,4 @@ vim.diagnostic.config({
 vim.lsp.enable({
 	"jsonls",
 	"lua_ls",
-	-- "drupal-ls"
 })
