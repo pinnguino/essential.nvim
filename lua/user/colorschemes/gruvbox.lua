@@ -1,7 +1,7 @@
 return {
 	"ellisonleao/gruvbox.nvim",
-	enabled = false,
-	lazy = true,
+	enabled = true,
+	keys = { "<leader>fc" },
 	priority = 1000,
 	opts = {
 		contrast = "hard"

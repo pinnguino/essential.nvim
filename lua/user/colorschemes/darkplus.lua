@@ -1,7 +1,7 @@
 return {
 	"martinsione/darkplus.nvim",
-	enabled = false,
-	lazy = false,
+	enabled = true,
+	keys = { "<leader>fc" },
 	priority = 1000,
 	-- Style: darkplus
 }

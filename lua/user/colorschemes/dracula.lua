@@ -1,7 +1,7 @@
 return {
 	"Mofiqul/dracula.nvim",
-	enabled = false,
-	lazy = false,
+	enabled = true,
+	keys = { "<leader>fc" },
 	priority = 1000,
 	-- Styles: dracula, dracula-soft
 }
