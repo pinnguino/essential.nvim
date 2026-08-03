@@ -1,8 +1,2 @@
-require("user.options")
-require("user.lazy")
-require("user.lsp")
-require("user.colorscheme")
-require("user.keymaps")
-require("user.last-session")
-require("user.my_plugins.autopairs")
-require("user.my_plugins.doc-mode")
+vim.opt.number = true
+vim.opt.relativenumber = true
