@@ -1,4 +1,5 @@
-require("user.colorscheme")
 require("user.options")
 require("user.lazy")
+require("user.colorscheme")
+require("user.my_plugins")
 require("user.keymaps")
