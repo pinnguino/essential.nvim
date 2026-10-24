@@ -1,6 +1,6 @@
 -- Tree file explorer
 
-vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", opts) -- Opens the file tree
+vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = true, silent = true }) -- Opens the file tree
 
 local function on_attach(bufnr) -- This function will be called in nvim-tree plugin config
     local api = require('nvim-tree.api')
