@@ -8,3 +8,6 @@ vim.keymap.set("n", "<leader>fc", ":FzfLua colorschemes<CR>", opts) -- Colorsche
 vim.keymap.set("n", "<leader>fC", ":FzfLua commands<CR>", opts) -- Neovim commands
 vim.keymap.set("n", "<leader>fd", ":FzfLua diagnostics_workspace<CR>", opts) -- Workspace diagnostics
 vim.keymap.set("n", "<leader>fk", ":FzfLua keymaps<CR>", opts) -- Keymaps
+
+-- LivePreview
+vim.keymap.set("n", "<leader>lp", ":LivePreview pick<CR>", opts) -- Pick a file to start LivePreview
