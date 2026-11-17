@@ -1,0 +1,11 @@
+{
+    "Local function": {
+        "prefix": "fn",
+        "body": [
+            "local function ${1:name}(${2:args})",
+            "\t$0",
+            "end"
+        ],
+        "description": "Declares a local function"
+    }
+}
