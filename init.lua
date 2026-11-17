@@ -1,4 +1,5 @@
 require("user.options")
+require("user.lsp")
 require("user.lazy")
 require("user.colorscheme")
 require("user.my_plugins")
