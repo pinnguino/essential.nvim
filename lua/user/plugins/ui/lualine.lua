@@ -1,3 +1,13 @@
+local function get_current_lsp()
+    local buffer = vim.api.nvim_get_current_buf()
+    local lsps = vim.lsp.get_clients({ bufnr = buffer })
+    if #lsps == 0 then
+        return ""
+    end
+    return " " .. lsps[1].name
+end
+
+
 return {
     'nvim-lualine/lualine.nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons' },
@@ -25,7 +35,7 @@ return {
                 'diagnostics',
             },
             lualine_c = { 'filename' },
-            lualine_x = { 'filetype' },
+            lualine_x = { get_current_lsp, 'filetype' },
             lualine_y = {},
             lualine_z = { 'location' },
         },
