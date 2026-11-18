@@ -62,6 +62,7 @@ return {
 	},
 	ui = {
 		Buffers = " ",
+        Globe = " ",
 		ArrowCircleDown = "",
 		ArrowCircleLeft = "",
 		ArrowCircleRight = "",
